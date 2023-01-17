@@ -1,3 +1,4 @@
+/* Creating a temporary table for all open orders without tracking numbers from 3 different databases */
 
 CREATE VIEW "Missing Tracking Numbers" AS
 SELECT ZZ2.mfg_loc, ZZ2.ord_no as 'CES Order#', ZZ2.ship_instruction_1 as 'Customer Order#', ZZ2.user_def_fld_1 as 'Tracking#',
