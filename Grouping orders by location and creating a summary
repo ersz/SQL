@@ -1,4 +1,5 @@
-SELECT Warehouse.warehouse_id,
+SELECT 
+       Warehouse.warehouse_id,
        CONCAT(Warehouse.state, ': ', Warehouse.warehouse_alias) AS warehouse_name,
        COUNT(Orders.order_id) AS number_of_orders,
        (SELECT
@@ -14,4 +15,4 @@ SELECT Warehouse.warehouse_id,
 FROM prjct376317.warehouse_orders.Warehouse Warehouse LEFT JOIN prjct376317.warehouse_orders.Orders Orders
   ON Orders.warehouse_id = Warehouse.warehouse_id
 GROUP BY Warehouse.warehouse_id, warehouse_name
-HAVING COUNT(Orders.order_id) > 0
+HAVING COUNT(Orders.order_id) > 0;
