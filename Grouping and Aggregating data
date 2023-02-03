@@ -27,4 +27,4 @@ GROUP BY
   trips.start_station_id,
   bikeid
 ORDER BY
-  trip_cnt DESC
+  trip_cnt DESC;
